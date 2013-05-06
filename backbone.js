@@ -545,7 +545,7 @@
 
     // Create a new model with identical attributes to this one.
     clone: function() {
-      return new this.constructor(this.attributes);
+      return new this.constructor(this.attributes, this.options);
     },
 
     // A model is new if it has never been saved to the server, and lacks an id.
@@ -892,7 +892,7 @@
 
     // Create a new collection with an identical list of models as this one.
     clone: function() {
-      return new this.constructor(this.models);
+      return new this.constructor(this.models, this.options);
     },
 
     // Private method to reset all internal state. Called when the collection
